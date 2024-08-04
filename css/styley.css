@@ -5,9 +5,10 @@ html{
 *, *::before , *::after{
     box-sizing: inherit;
 }
+/***globales*/
 :root{
     /**colores primary**/
-    --Moderateviolet: hsl(263, 55%, 52%);
+    --Moderateviolet: hsl(289, 73%, 29%);
     --Verydarkgrayishblue: hsl(217, 19%, 35%);
     --Verydarkblackishblue: hsl(219, 29%, 14%);
     --White: hsl(0, 0%, 100%);
@@ -20,49 +21,168 @@ body{
     font-size: 1.3rem;
     background-color: var(--Lightgrayishblue);
 }
-h3,p{
+
+   
+
+p{
     padding: 0;
     margin: 0;
+    font-size: 7.7px;
+    line-height: 1.3rem;
+    color: var(--Lightgray);
 }
+h4{
+    font-size: 1.2rem;
+    font-weight: bold;
+    color:var(--White);
+    font-weight: bold;
+}
+/*contenedor primary*/
 .first__container{
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 100%;
+    width:100%;
+    max-width: 100%;
+  
     height: 100%;
 
 }
 .last__container{
-    width: 80%;
+    width: 120rem;
+    max-width: 60%;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 90rem;
 }
 .main{
-    width: 100%;
+    width: 800;
+    max-width:60%;
+
    
 }
 .article1{
     background-color: var(--Moderateviolet);
-    color: var(--White);
+
+   
 }
 .article2{
     background-color: var(--Verydarkgrayishblue);
-    color: var(--White);
 }
 .article4{
     background-color: var(--Verydarkblackishblue);
-    color: var(--White);
+   
 }
 .article3,.article5{
     background-color: var(--White);
+   
+    
 
 }
-.container__logo{
-    margin-right: 2rem;
-}
 
+
+
+.container__article{
+    display: flex;
+   align-items: center;
+   width: 100%;
+   
+    }
+
+    .article1,.article2, .article3, .article4, .article5{
+        -webkit-box-shadow: 4px 6px 5px 5px rgba(0,0,0,0.75);
+        -moz-box-shadow: 4px 6px 5px 5px rgba(0,0,0,0.75);
+        box-shadow: 4px 6px 5px 5px rgba(0,0,0,0.75);
+        border-radius: .5rem;
+        display: flex;
+        flex-direction: column;
+        padding: 2rem;
+    }
+    .article1{
+        position: relative;
+
+    }
+    .quota{
+        width: 10rem;
+        height: 3.1rem;
+       margin-left: 60rem;
+        position: absolute;
+        background-image: url(/images/bg-pattern-quotation.svg);
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: center  center;
+      opacity: 0.3;
+        
+    }
+    .activado__logo{
+        display: flex;
+       align-items: center;
+    }
+    .container__parrrafos{
+        margin-left: 1rem;
+        font-weight: bold;
+    }
+    .activo_black{
+        color: black;
+    }
+    .color__grey{
+        color: black;
+    }
+    .img__article{
+        width: 3rem;
+        border-radius: 50%;
+    }
+    /*version mobil*/
+    @media (min-width: 375px) {
+        .first__container{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width:100%;
+            height: 100%;
+        
+        
+    }
+    .last__container{
+        width: 100%;
+        max-width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height:135rem;
+      
+       
+    }
+    .main{
+        width: 60%;
+        max-width: 100%;
+       display: flex;
+       flex-direction: column;
+       gap: 2rem;
+    
+       
+    }
+    .quota{
+        width: 10rem;
+        height: 5.1rem;
+       margin-left: 10rem;
+        position: absolute;
+        background-image: url(/images/bg-pattern-quotation.svg);
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: center  center;
+      opacity: 0.3;
+        
+    }
+    
+
+}
+       
+    
+  
+   /*versio tablle*/
+    
 @media (min-width: 768px) {
     .main{
         display: grid;
@@ -74,6 +194,29 @@ h3,p{
         
        
     }
+    .first__container{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+    
+    }
+    .main{
+        width: 100%;
+        max-width: 100%;
+    
+       
+    }
+    .last__container{
+        width: 100%;
+        max-width: 95%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 90rem;
+    }
+   
     .article1{
         grid-column: 1/3;
        
@@ -93,23 +236,8 @@ h3,p{
     }
    
     
-    .article1,.article2, .article3, .article4, .article5{
-        -webkit-box-shadow: 4px 6px 5px 5px rgba(0,0,0,0.75);
--moz-box-shadow: 4px 6px 5px 5px rgba(0,0,0,0.75);
-box-shadow: 4px 6px 5px 5px rgba(0,0,0,0.75);
-        
-        border-radius: 1rem;
-        display: flex;
-        flex-direction: column;
-        padding: 2rem;
-        
-       
-        
-    }
-    .img__article{
-        width: 3rem;
-        border-radius: 50%;
-    }
+
+ 
     .article3{
         grid-row: 2/3; 
     }
@@ -118,16 +246,64 @@ box-shadow: 4px 6px 5px 5px rgba(0,0,0,0.75);
        
         
     }
+    .quota{
+        width: 10rem;
+        height: 7.7rem;
+       margin-left: 20rem;
+        position: absolute;
+        background-image: url(/images/bg-pattern-quotation.svg);
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: center  center;
+      opacity: 0.3;
+        
+    }
+    
     
 }
-.container__article{
-    display: flex;
-   align-items: center;
-   width: 100%;
-   
+/*version pc*/
+    @media (min-width: 1440px) {
+        .quota{
+            width: 10rem;
+            height: 6.7rem;
+           margin-left: 27rem;
+            position: absolute;
+            background-image: url(/images/bg-pattern-quotation.svg);
+            background-repeat: no-repeat;
+            background-size: contain;
+            background-position: center  center;
+          opacity: 0.3;
+            
+        }
+        .first__container{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            height: 100%;
+        
+        }
+        .last__container{
+            width: 100%;
+            max-width: 60%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 90rem;
+        }
+        h4{
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+        p{
+            font-size: 9.8px;
+            line-height: 1.3rem;
+            color: var(--Lightgray);
+        }
     }
-
-
-
-.attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
+    .attribution { font-size: 11px; 
+        text-align: center; 
+    }
+    .attribution a { 
+        color: hsl(228, 45%, 44%); 
+    }
